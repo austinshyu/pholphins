@@ -28,6 +28,7 @@
         {
             "node" : 3,
             "text" : "Hee hee hee okay. To figure out the rules of this game, you should talk to the other passengers.",
+            "set" : ["talkedToCreeper 1"],
             "transitions" : [
                 ["Are you alright in the head?", 5],
                 ["Ok. Farewell", "exit"]
@@ -36,6 +37,7 @@
         {
             "node" : 4,
             "text" : "Heeeeeeee okay. I won't force you. If you don't want to talk to me, maybe you should talk to some other passengers",
+            "set" : ["talkedToCreeper 1"],
             "transitions" : [
                 ["Farewell", "exit"]
             ]

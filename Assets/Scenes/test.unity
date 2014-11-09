@@ -3302,7 +3302,7 @@ GameObject:
   - 65: {fileID: 1475275963}
   - 114: {fileID: 1475275962}
   m_Layer: 0
-  m_Name: next_to_madam
+  m_Name: next_to_cop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
