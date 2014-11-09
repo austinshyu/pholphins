@@ -24,6 +24,14 @@ public class mainchar : MonoBehaviour
 		global = FindObjectOfType<Global>();
 	}
 
+	void OnGUI() {
+		if (global.ValueOfKey("tookKnife") == "1") {
+			float knifeSize = Screen.height * 0.3f;
+			GUI.DrawTexture(new Rect(Screen.width - knifeSize - 20f, Screen.height - knifeSize - 20f, knifeSize, knifeSize),
+			                Resources.Load<Texture2D>("knife"));
+		}
+	}
+
 	// Update is called once per frame
 	void Update ()
 	{

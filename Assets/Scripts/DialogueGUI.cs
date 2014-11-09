@@ -13,9 +13,6 @@ public class DialogueGUI : MonoBehaviour {
 	
 	void OnGUI() {
 		if (current != null) {
-			GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height));
-			GUILayout.Box("", style.box);
-			GUILayout.EndArea();
 			GUILayout.BeginArea(new Rect(30f, 30f, Screen.width/2f - 60f, Screen.height - 60f));
 			GUILayout.Label(current.Text, style.label);
 			GUILayout.EndArea ();
