@@ -1,0 +1,42 @@
+{
+    "nodes": [
+        {
+            "node" : 0,
+            "text" : "Oh! Oh! Why hello there! How are you doing?",
+            "transitions" : [
+                ["Okay. . .?", 1],
+                ["Um.", 1]
+            ]
+        },
+        {
+            "node" : 1,
+            "text" : "Oh! I didn't mean to be too forward, I'm just so excited!",
+            "transitions" : [
+                ["For what?", 3],
+                ["Do you know anything about this train?", 2]
+            ]
+        },
+        {
+            "node" : 2,
+            "text" : "Oh! Oh! Ooooh! I'm on my way to see my husband. You know, men and working away. Same old, same old. Oh ho!",
+            "transitions" : [
+                ["Anything else?", 4],
+            ]
+        },
+        {
+            "node" : 3,
+            "text" : "I'm expecting a beautiful young daughter here! Oh ho! This is a dream come true!",
+            "transitions" : [
+                ["Do you know anything about this train?", 2],
+            ]
+        },
+        {
+            "node" : 4,
+            "text" : "Hmmm.... Actually I heard recently that a train crashed somewhere. Oh... I'm a little scared, but I'm sure it'll fine!",
+            "transitions" : [
+                ["Farewell", "exit"]
+            ]
+        }
+ 
+    ]
+}

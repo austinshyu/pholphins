@@ -1,0 +1,42 @@
+{
+    "nodes": [
+        {
+            "node" : 0,
+            "text" : "Heyyyyy I hearrrd you wereee a bit confusseeeddd. . . I mightttt have some ansssssswers",
+            "transitions" : [
+                ["Lay it", 1],
+                ["No thank you", 2]
+            ]
+        },
+        {
+            "node" : 1,
+            "text" : "I think the persssson in reddd is a famoussss convicttt. . . I read in the newssss that sssome murderer escaped prison and is on the run. ",
+            "transitions" : [
+                ["Tell me more",3],
+                ["We need to do something", 2]
+            ]
+        },
+        {
+            "node" : 2,
+            "text" : "You're righttt. I heard he killlllled three policemennn with just a kitchen knifeeee. . .",
+            "transitions" : [
+                ["We're in danger", 4],
+            ]
+        },
+        {
+            "node" : 3,
+            "text" : "I heard he killlllled three policemennn with just a kitchen knifeeee. . .",
+            "transitions" : [
+                ["We're in danger", 4],
+            ]
+        },
+        {
+            "node" : 4,
+            "text" : "Thissss is ssssstill just a hunch. You might neeeeed more cluessss to figure thissss out",
+            "transitions" : [
+                ["Farewell", "exit"]
+            ]
+        }
+ 
+    ]
+}
