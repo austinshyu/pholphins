@@ -18,6 +18,7 @@ public class sitScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		dlg = transform.parent.GetComponent<Dialogue>();
 		if (global.DialogueGUI.Active) {
 			bubble.SetActive(false);
 		}

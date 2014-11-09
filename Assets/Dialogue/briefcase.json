@@ -1,0 +1,51 @@
+{
+    "nodes": [
+        {
+            "node" : 0,
+            "startIf" : [],
+            "text" : "THE MAN IN RED SEEMS TO HAVE DISAPPEARED. HE SEEMS TO HAVE LEFT HIS SUITECASE",
+            "transitions" : [
+                ["LOOK INSIDE SUITCASE", 1],
+                ["DON'T LOOK INSIDE", 2]
+            ]
+        },
+        {
+            "node" : 1,
+            "text" : "YOU HURRIEDLY OPEN THE SUITCASE. YOU SEE A GLEAMING OBJECT INSIDE: A KNIFE. YOU TAKE IT",
+            "transitions" : [
+                ["Leave", "exit"],
+            ]
+        },
+        {
+            "node" : 2,
+            "text" : "OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT.OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT. OPEN IT.",
+            "transitions" : [
+                ["Yes", 3],
+                ["No", 4]
+            ]
+        },
+        {
+            "node" : 3,
+            "text" : "Hee hee hee okay. To figure out the rules of this game, you should talk to the other passengers.",
+            "transitions" : [
+                ["Are you alright in the head?", 5],
+                ["Ok. Farewell", "exit"]
+            ]
+        },
+        {
+            "node" : 4,
+            "text" : "Heeeeeeee okay. I won't force you. If you don't want to talk to me, maybe you should talk to some other passengers",
+            "transitions" : [
+                ["Farewell", "exit"]
+            ]
+        },
+        {
+            "node" : 5,
+            "text" : "Are you?",
+            "set" : ["talkedToCreeper 1"],
+            "transitions" : [
+                ["Farewell", "exit"]
+            ]
+        },
+    ]
+}

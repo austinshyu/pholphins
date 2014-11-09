@@ -27,6 +27,7 @@ public class Global : MonoBehaviour
 				madam.SetActive (false);
 				bully.SetActive (false);
 				mother.SetActive (false);
+		GameObject.Find ("knife").GetComponent<SpriteRenderer>().enabled = false;
 		}
 
 		void Update ()
@@ -36,19 +37,32 @@ public class Global : MonoBehaviour
 				bully.SetActive (false);
 				mother.SetActive (false);*/
 				if (ValueOfKey ("hideCreeper") == "1") {
+						print ("falafel");
+						creeper.GetComponent<Dialogue> ().contents = Resources.Load <TextAsset> ("briefcase2");
 						creeper.GetComponent<SpriteRenderer> ().enabled = false;
 						GameObject.Find ("next_to_creepy").GetComponent<BoxCollider> ().enabled = true;
 						EnableBubble (creeper);
 						creeper.GetComponent<Dialogue> ().enabled = true;
-			//GameObject.Find ("person").GetComponent<mainchar> ().canSit = true;
+						//GameObject.Find ("person").GetComponent<mainchar> ().canSit = true;
 						GameObject.Find ("next_to_creepy").GetComponent<sitScript> ().enabled = true;
+				}
+				if (ValueOfKey ("tookKnife") == "1") {
+			GameObject.Find ("knife").GetComponent<SpriteRenderer>().enabled = true;
+						print ("wow so many falafels");
+						DisableBubble (creeper);
+						GameObject.Find ("next_to_creepy").GetComponent<BoxCollider> ().enabled = false;
+						creeper.GetComponent<Dialogue> ().enabled = false;
+						//GameObject.Find ("person").GetComponent<mainchar> ().canSit = false;
+						//GameObject.Find ("person").GetComponent<mainchar> ().availableDialogue = null;
+						GameObject.Find ("next_to_creepy").GetComponent<sitScript> ().enabled = false;
+
 				}
 				if (ValueOfKey ("talkedToCreeper") == "1") {
 						DisableBubble (creeper);
 						GameObject.Find ("next_to_creepy").GetComponent<BoxCollider> ().enabled = false;
 						creeper.GetComponent<Dialogue> ().enabled = false;
 						//GameObject.Find ("person").GetComponent<mainchar> ().canSit = false;
-			//GameObject.Find ("person").GetComponent<mainchar> ().availableDialogue = null;
+						//GameObject.Find ("person").GetComponent<mainchar> ().availableDialogue = null;
 						GameObject.Find ("next_to_creepy").GetComponent<sitScript> ().enabled = false;
 
 						madam.SetActive (true);
@@ -70,6 +84,7 @@ public class Global : MonoBehaviour
 				}
 				if (ValueOfKey ("talkedToBully") == "1" && ValueOfKey ("talkedToMother") == "1" && ValueOfKey ("talkedToMadam") == "1" && ValueOfKey ("talkedToCreeper") == "1") {
 						SetValueOfKey ("hideCreeper", "1");
+						SetValueOfKey ("talkedToCreeper", "0");
 				}
 
 		}

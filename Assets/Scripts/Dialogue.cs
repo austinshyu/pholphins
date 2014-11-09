@@ -16,16 +16,17 @@ public class Dialogue : MonoBehaviour {
 		global = FindObjectOfType<Global>();
 		json = new JSONObject(contents.ToString());
 		EnterDialogue();
-		Debug.Log(json.ToString());
+		/*Debug.Log(json.ToString());
 		Debug.Log(json.GetField("nodes"));
 		Debug.Log (currentNode);
 		foreach (string s in nodeTransitionText) {
-			Debug.Log(s);
-		}
+			//Debug.Log(s);
+		}*/
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		json = new JSONObject(contents.ToString());
 		if(Input.GetKeyDown (KeyCode.A)){
 			currentNode+=1;
 			Load (currentNode);
