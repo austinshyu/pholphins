@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cd5b489b8a4cb428ed475734dbb571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contents: {fileID: 0}
+  contents: {fileID: 4900000, guid: 617c9fcce8e0c46a1869a4588c77098c, type: 3}
 --- !u!1 &38438764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,7 +3265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cd5b489b8a4cb428ed475734dbb571, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contents: {fileID: 0}
+  contents: {fileID: 4900000, guid: a54a7d1cfb79943248b16bad65c06f0d, type: 3}
 --- !u!212 &1686919788
 SpriteRenderer:
   m_ObjectHideFlags: 0
