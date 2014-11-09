@@ -2,14 +2,12 @@
 using System.Collections;
 
 public class Global : MonoBehaviour {
+	DialogueGUI dialogueGUI;
 
 	// Use this for initialization
 	void Start () {
-	
+		dialogueGUI = GetComponent<DialogueGUI>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public DialogueGUI DialogueGUI { get { return dialogueGUI; } }
 }
