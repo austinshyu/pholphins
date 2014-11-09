@@ -2,9 +2,11 @@
     "nodes": [
         {
             "node" : 0,
+            "startIf" : ["talkedToCreeper 1"],
             "text" : "Hello there!",
+            "set" : ["talkedToMother 1"],
             "transitions" : [
-                ["Hi!", 1],
+                ["Hi!", 1, ["isMotherPresent 0", "foundClue 2"]],
                 ["Bye~", "exit"]
             ]
         },

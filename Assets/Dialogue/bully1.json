@@ -2,6 +2,7 @@
     "nodes": [
         {
             "node" : 0,
+            "startIf" : [],
             "text" : "Heyyyyy I hearrrd you wereee a bit confusseeeddd. . . I mightttt have some ansssssswers",
             "transitions" : [
                 ["Lay it", 1],

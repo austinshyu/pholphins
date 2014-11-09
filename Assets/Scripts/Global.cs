@@ -19,10 +19,13 @@ public class Global : MonoBehaviour {
 	void Update(){
 		Debug.Log(ValueOfKey ("talkedToCreeper"));
 	}
-	string ValueOfKey(string key){
+	public string ValueOfKey(string key){
 		string rv = "0";
 		values.TryGetValue(key,out rv);
 		return rv; 
+	}
+	public void SetValueOfKey(string key, string value) {
+		values[key] = value;
 	}
 	public DialogueGUI DialogueGUI { get { return dialogueGUI; } }
 }
