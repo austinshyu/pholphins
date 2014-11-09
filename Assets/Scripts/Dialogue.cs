@@ -23,7 +23,12 @@ public class Dialogue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(Input.GetKeyDown (KeyCode.A)){
+			currentNode+=1;
+			Load (currentNode);
+		}
+		print ("this is current node: " + currentNode);
+		print (nodeText);
 	}
 
 	public void EnterDialogue () {
