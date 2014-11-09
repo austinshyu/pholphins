@@ -16,6 +16,7 @@ public class mainchar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		rigidbody.freezeRotation = true;
 		if (this.gameObject.rigidbody.velocity != Vector3.zero) {
 						anim.SetBool ("walking", true);
 			//this.gameObject.GetComponent<Animator>().Play (1);
