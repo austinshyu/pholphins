@@ -47,7 +47,7 @@ public class Global : MonoBehaviour
 						GameObject.Find ("next_to_creepy").GetComponent<sitScript> ().enabled = true;
 				}
 				if (ValueOfKey ("tookKnife") == "1") {
-			GameObject.Find ("knife").GetComponent<SpriteRenderer>().enabled = true;
+						//GameObject.Find ("knife").GetComponent<SpriteRenderer>().enabled = true;
 						print ("wow so many falafels");
 						DisableBubble (creeper);
 						GameObject.Find ("next_to_creepy").GetComponent<BoxCollider> ().enabled = false;
