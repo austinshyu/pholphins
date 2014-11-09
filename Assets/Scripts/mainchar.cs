@@ -22,7 +22,7 @@ public class mainchar : MonoBehaviour {
 			//this.gameObject.GetComponent<Animator>().Play (1);
 				} else if (this.gameObject.rigidbody.velocity == Vector3.zero) {
 			anim.SetBool ("walking",false);	
-			this.gameObject.GetComponent<Animator>().Play (0);
+			this.gameObject.GetComponent<Animator>().Play ("person_idle");
 
 		}
 		if (Input.GetKey (KeyCode.LeftArrow)) {
