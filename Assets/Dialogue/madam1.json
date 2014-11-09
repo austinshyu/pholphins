@@ -54,7 +54,7 @@
         },
         {
             "node" : 7,
-            "text" : "I'm sorry. Everything is so... fuzzy.",
+            "text" : "I'm sorry. Everything is so... hazy.",
             "transitions" : [
                 ["Please feel better.", "exit"]
             ]
