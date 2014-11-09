@@ -23,7 +23,7 @@ public class sitScript : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerStay(Collider collide){
+	void OnTriggerEnter(Collider collide){
 		print ("can sit" + gameObject.name);
 		if (collide.gameObject.name == "person") {
 			//setFalse = false;

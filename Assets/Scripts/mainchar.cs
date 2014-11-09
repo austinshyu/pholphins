@@ -115,6 +115,8 @@ public class mainchar : MonoBehaviour
 
 	void Stand ()
 	{
+		this.availableDialogue = null;
+		this.canSit = false;
 		this.gameObject.GetComponent<BoxCollider> ().enabled = true;
 		this.gameObject.GetComponent<Animator> ().enabled = true;
 		sitting = false;

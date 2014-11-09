@@ -34,6 +34,7 @@
         {
             "node" : 4,
             "text" : "Hmmm.... Actually I heard recently that a train crashed somewhere. Oh... I'm a little scared, but I'm sure it'll fine!",
+            "set" : ["talkedToMother 1"],
             "transitions" : [
                 ["Farewell", "exit"]
             ]

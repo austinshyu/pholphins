@@ -34,6 +34,7 @@
         {
             "node" : 4,
             "text" : "Thissss is ssssstill just a hunch. You might neeeeed more cluessss to figure thissss out",
+            "set" : ["talkedToBully 1"],
             "transitions" : [
                 ["Farewell", "exit"]
             ]

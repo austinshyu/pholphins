@@ -43,6 +43,7 @@
         {
             "node" : 5,
             "text" : "Are you?",
+            "set" : ["talkedToCreeper 1"],
             "transitions" : [
                 ["Farewell", "exit"]
             ]
