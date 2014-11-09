@@ -1,0 +1,50 @@
+{
+    "nodes": [
+        {
+            "node" : 0,
+            "text" : ". . .",
+            "transitions" : [
+                ["Hello, stranger", 1],
+                [". . .", 1]
+            ]
+        },
+        {
+            "node" : 1,
+            "text" : "Hello, wanderer. Hee heee where are you going?",
+            "transitions" : [
+                ["I... don't know", 2],
+                [". . .", 2]
+            ]
+        },
+        {
+            "node" : 2,
+            "text" : "Heeeeehhhh? Anyways, want to play a game?",
+            "transitions" : [
+                ["Yes", 3],
+                ["No", 4]
+            ]
+        },
+        {
+            "node" : 3,
+            "text" : "Hee hee hee okay. To figure out the rules of this game, you should talk to the other passengers.",
+            "transitions" : [
+                ["Are you alright in the head?", 5],
+                ["Ok. Farewell", "exit"]
+            ]
+        },
+        {
+            "node" : 4,
+            "text" : "Heeeeeeee okay. I won't force you. If you don't want to talk to me, maybe you should talk to some other passengers",
+            "transitions" : [
+                ["Farewell", "exit"]
+            ]
+        },
+        {
+            "node" : 5,
+            "text" : "Are you?",
+            "transitions" : [
+                ["Farewell", "exit"]
+            ]
+        },
+    ]
+}

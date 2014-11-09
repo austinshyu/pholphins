@@ -1,0 +1,63 @@
+{
+    "nodes": [
+        {
+            "node" : 0,
+            "text" : "H-h-h-hello. Where are we? ",
+            "transitions" : [
+                ["I don't know.", 1],
+                ["Are you okay?", 2]
+            ]
+        },
+        {
+            "node" : 1,
+            "text" : "I've been r-r-riding on this train forever. I must have fell asleep. I must have fell asleep. I must have...",
+            "transitions" : [
+                ["Can I help you somehow?", 3],
+                ["You don't seem well", 2]
+            ]
+        },
+        {
+            "node" : 2,
+            "text" : "OF COURSE I'M NOT WELL, Y-Y-YOU INSO- . . . I'm sorry. I-It's just, I'm so lost.",
+            "transitions" : [
+                ["Where were you originally heading?", 4],
+            ]
+        },
+        {
+            "node" : 3,
+            "text" : "Y-Yes. Puh-Puh-Puh-Puh-Puh-P-. . . *sigh* Please help me find my way.",
+            "transitions" : [
+                ["Where were you originally heading?", 4],
+            ]
+        },
+        {
+            "node" : 4,
+            "text" : "I d-don't remember. . . Something about a mu-mu-murder. There was a murder I think? A murder? A murder?",
+            "transitions" : [
+                ["A murder?", 5]
+            ]
+        },
+        {
+            "node" : 5,
+            "text" : "Some woman got ku-killed. Something in the nyuh-nyuh-newspaper.",
+            "transitions" : [
+                ["Tell me more about this murder", 6],
+                ["Any other ideas as to where you were heading?", 7]
+            ]
+        },
+        {
+            "node" : 6,
+            "text" : "Maybe a mu-mu-murder where I-I-I was heading-uh? Ohhhhhhh... IF ONLY THIS BLASTED TRAIN . . .!!!! *sigh*",
+            "transitions" : [
+                ["Any other clues as to where you were heading?", 7]
+            ]
+        },
+        {
+            "node" : 7,
+            "text" : "I'm sorry. Everything is so... fuzzy.",
+            "transitions" : [
+                ["Please feel better.", "exit"]
+            ]
+        },
+    ]
+}
