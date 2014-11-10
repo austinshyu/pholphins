@@ -28,6 +28,7 @@ public class Global : MonoBehaviour
 				values.Add ("tookKnife", "0");
 				values.Add ("showCreeperAgain!", "0");
 		values.Add ("end", "0");
+		values.Add ("realend", "0");
 				madam.SetActive (false);
 				bully.SetActive (false);
 				mother.SetActive (false);
@@ -35,6 +36,12 @@ public class Global : MonoBehaviour
 
 		void Update ()
 		{
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Application.Quit();
+		}
+		if(ValueOfKey ("realend") == "1"){
+			FindObjectOfType<CamFade>().fadeDir = 1f;
+		}
 				Debug.Log (values ["talkedToCreeper"]);
 				/*madam.SetActive (false);
 				bully.SetActive (false);
@@ -72,6 +79,8 @@ public class Global : MonoBehaviour
 						//madam.
 						bully.SetActive (true);
 						mother.SetActive (true);
+			FindObjectOfType<Flicker>().probability = 0.02f;
+			FindObjectOfType<Flicker>().severity = 0.6f;
 				} 
 				if (ValueOfKey ("talkedToMadam") == "1") {
 						DisableBubble (madam);
@@ -93,6 +102,11 @@ public class Global : MonoBehaviour
 			you.SetActive(true);
 		
 			GameObject.Find ("cop_sit").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("cop_blood");
+			SetValueOfKey("tookKnife", "0");
+			Light[] lights = FindObjectsOfType<Light>();
+			foreach (Light l in lights) {
+				l.color = new Color(0.8f, 0f, 0f);
+			}
 			DisableBubble (GameObject.Find ("cop_sit"));
 			GameObject.Find ("next_to_cop").GetComponent<BoxCollider>().enabled = false;
 			creeper.SetActive (false);
@@ -100,6 +114,7 @@ public class Global : MonoBehaviour
 			mother.SetActive (false);
 			bully.SetActive (false);
 		}
+
 			
 		}
 
