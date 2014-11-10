@@ -1,0 +1,43 @@
+{
+    "nodes": [
+        {
+            "node" : 0,
+            "startIf" : [],
+            "text" : "Hello, you",
+            "transitions" : [
+                [". . .", 1],
+            ]
+        },
+        {
+            "node" : 1,
+            "text" : "You thought you could hide from the truth? You thought you could deny reality?",
+            "transitions" : [
+                ["Who are you? What are you saying?", 2],
+            ]
+        },
+        {
+            "node" : 2,
+            "text" : "Oh don't be stupid. I AM YOU. I AM HORROR. I AM THE MONSTER. I KILLED EVERYONE.",
+            "transitions" : [
+                ["Don't be stupid. That red shirted guy with the mustache killed everyone", 3],
+            ]
+        },
+        {
+            "node" : 3,
+            "text" : "HAH You're blind. You sick bastard, imagining all of this in your head. Trying to escape. HAH HAH HAH",
+            "transitions" : [
+                ["What? I didn't kill everyone... I ... I found that knife! In that briefcase! And the cop! And the... And the... ", 4],
+            ]
+        },
+        {
+            "node" : 4,
+            "text" : "Just stop it. You killed everyone and now you're in your fantasy world of denial. Accept it, Thomas.",
+            "set": ["realend 1"],
+            "transitions" : [
+                ["I did it.","end"],
+                ["No.", "end"]
+            ]
+        },
+
+    ]
+}
