@@ -10,13 +10,16 @@ public class Global : MonoBehaviour
 		public GameObject madam;
 		public GameObject bully;
 		public GameObject mother;
+	public GameObject you;
 		// Use this for initialization
 		void Start ()
 		{
 				dialogueGUI = GetComponent<DialogueGUI> ();
+		you = GameObject.Find ("deadu_sit");
 				madam = GameObject.Find ("madam_sit");
 				bully = GameObject.Find ("bully_sit");
 				mother = GameObject.Find ("newmother_sit");
+		you.SetActive(false);
 				values.Add ("talkedToCreeper", "0");
 				values.Add ("talkedToMadam", "0");
 				values.Add ("talkedToBully", "0");
@@ -28,7 +31,6 @@ public class Global : MonoBehaviour
 				madam.SetActive (false);
 				bully.SetActive (false);
 				mother.SetActive (false);
-		GameObject.Find ("knife").GetComponent<SpriteRenderer>().enabled = false;
 		}
 
 		void Update ()
@@ -88,6 +90,8 @@ public class Global : MonoBehaviour
 						SetValueOfKey ("talkedToCreeper", "0");
 				}
 				if (ValueOfKey ("end") == "1") {
+			you.SetActive(true);
+		
 			GameObject.Find ("cop_sit").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("cop_blood");
 			DisableBubble (GameObject.Find ("cop_sit"));
 			GameObject.Find ("next_to_cop").GetComponent<BoxCollider>().enabled = false;
