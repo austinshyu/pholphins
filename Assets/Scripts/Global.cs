@@ -24,6 +24,7 @@ public class Global : MonoBehaviour
 				values.Add ("hideCreeper", "0"); // hide creeper if talked to everyone once
 				values.Add ("tookKnife", "0");
 				values.Add ("showCreeperAgain!", "0");
+		values.Add ("end", "0");
 				madam.SetActive (false);
 				bully.SetActive (false);
 				mother.SetActive (false);
@@ -86,7 +87,16 @@ public class Global : MonoBehaviour
 						SetValueOfKey ("hideCreeper", "1");
 						SetValueOfKey ("talkedToCreeper", "0");
 				}
-
+				if (ValueOfKey ("end") == "1") {
+			GameObject.Find ("cop_sit").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("cop_blood");
+			DisableBubble (GameObject.Find ("cop_sit"));
+			GameObject.Find ("next_to_cop").GetComponent<BoxCollider>().enabled = false;
+			creeper.SetActive (false);
+			madam.SetActive (false);
+			mother.SetActive (false);
+			bully.SetActive (false);
+		}
+			
 		}
 
 		public void SetValueOfKey (string key, string value)
